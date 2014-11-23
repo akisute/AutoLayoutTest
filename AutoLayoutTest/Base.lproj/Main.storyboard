@@ -110,7 +110,7 @@
         <!--Test 1-->
         <scene sceneID="Ylx-r2-XQj">
             <objects>
-                <viewController id="obQ-QN-3EV" customClass="Test1ViewController" customModule="AutoLayoutTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="obQ-QN-3EV" customClass="Test1ViewController" customModule="AutoLayoutTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0l4-yH-sx3"/>
                         <viewControllerLayoutGuide type="bottom" id="it9-EQ-83h"/>
@@ -119,25 +119,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BsH-9R-Iis">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsH-9R-Iis">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PRv-tS-Osc" userLabel="red">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRv-tS-Osc" userLabel="red">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FeX-Q3-wb7" userLabel="blue">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeX-Q3-wb7" userLabel="blue">
                                         <rect key="frame" x="600" y="0.0" width="600" height="600"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1PM-Xo-lnl" userLabel="green">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PM-Xo-lnl" userLabel="green">
                                         <rect key="frame" x="1200" y="0.0" width="600" height="600"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1PM-Xo-lnl" secondAttribute="bottom" id="1Z7-5s-WBn"/>
+                                    <constraint firstItem="1PM-Xo-lnl" firstAttribute="leading" secondItem="FeX-Q3-wb7" secondAttribute="trailing" id="2GA-kf-Rua"/>
+                                    <constraint firstItem="PRv-tS-Osc" firstAttribute="leading" secondItem="BsH-9R-Iis" secondAttribute="leading" id="3em-3E-djb"/>
+                                    <constraint firstItem="PRv-tS-Osc" firstAttribute="height" secondItem="BsH-9R-Iis" secondAttribute="height" id="4xb-Zg-3L6"/>
+                                    <constraint firstAttribute="bottom" secondItem="FeX-Q3-wb7" secondAttribute="bottom" id="5yB-lV-sVG"/>
+                                    <constraint firstItem="PRv-tS-Osc" firstAttribute="width" secondItem="FeX-Q3-wb7" secondAttribute="width" id="BiN-9O-tV3"/>
+                                    <constraint firstAttribute="trailing" secondItem="1PM-Xo-lnl" secondAttribute="trailing" id="NJM-ed-90a"/>
+                                    <constraint firstItem="FeX-Q3-wb7" firstAttribute="top" secondItem="BsH-9R-Iis" secondAttribute="top" id="ZQR-uM-VWw"/>
+                                    <constraint firstItem="PRv-tS-Osc" firstAttribute="width" secondItem="BsH-9R-Iis" secondAttribute="width" id="dgk-bx-WWO"/>
+                                    <constraint firstItem="PRv-tS-Osc" firstAttribute="top" secondItem="BsH-9R-Iis" secondAttribute="top" id="gRc-30-17s"/>
+                                    <constraint firstItem="PRv-tS-Osc" firstAttribute="width" secondItem="1PM-Xo-lnl" secondAttribute="width" id="gaq-tG-3m2"/>
+                                    <constraint firstItem="FeX-Q3-wb7" firstAttribute="leading" secondItem="PRv-tS-Osc" secondAttribute="trailing" id="lO9-Ra-7z7"/>
+                                    <constraint firstAttribute="bottom" secondItem="PRv-tS-Osc" secondAttribute="bottom" id="p4I-Go-W3Z"/>
+                                    <constraint firstItem="PRv-tS-Osc" firstAttribute="height" secondItem="BsH-9R-Iis" secondAttribute="height" id="qdJ-UX-M7F"/>
+                                    <constraint firstItem="1PM-Xo-lnl" firstAttribute="top" secondItem="BsH-9R-Iis" secondAttribute="top" id="z3l-wU-TDB"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4xb-Zg-3L6"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="BsH-9R-Iis" secondAttribute="bottom" id="6MG-r1-o5o"/>
+                            <constraint firstAttribute="height" secondItem="BsH-9R-Iis" secondAttribute="height" id="8vx-MG-JTF"/>
+                            <constraint firstItem="BsH-9R-Iis" firstAttribute="top" secondItem="Rte-Gf-mBP" secondAttribute="top" id="Vzz-FD-nFZ"/>
+                            <constraint firstItem="BsH-9R-Iis" firstAttribute="leading" secondItem="Rte-Gf-mBP" secondAttribute="leading" id="gA9-T8-E4y"/>
+                            <constraint firstItem="it9-EQ-83h" firstAttribute="top" secondItem="BsH-9R-Iis" secondAttribute="bottom" id="nJn-Ow-qTM"/>
+                            <constraint firstAttribute="trailing" secondItem="BsH-9R-Iis" secondAttribute="trailing" id="nsr-RT-9IB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nJn-Ow-qTM"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Test 1" id="kjQ-Is-hdY"/>
                 </viewController>
